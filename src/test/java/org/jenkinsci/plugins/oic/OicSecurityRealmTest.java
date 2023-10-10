@@ -51,13 +51,13 @@ public class OicSecurityRealmTest {
 
         assertNotNull(manager);
 
-       // String key = "testKey";
-     //   Object principal = "testUser";
-       // GrantedAuthority[] authorities = new GrantedAuthority[]{GRANTED_AUTH1};
-       // UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(key, principal,
-      //      authorities);
+        String key = "testKey";
+        Object principal = "testUser";
+        GrantedAuthority[] authorities = new GrantedAuthority[]{GRANTED_AUTH1};
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(key, principal,
+            authorities);
 
-       // assertEquals(token, manager.authenticate(token));
+        assertEquals(token, manager.authenticate(token));
     }
 
     @Test
