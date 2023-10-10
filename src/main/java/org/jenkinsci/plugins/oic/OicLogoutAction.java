@@ -43,6 +43,20 @@ public class OicLogoutAction implements UnprotectedRootAction {
         Object principal = "testUser";
         return principal;
     }
+     public void testAuthenticate_withUsernamePasswordAuthenticationToken() throws Exception {
+        TestRealm realm = new TestRealm(wireMockRule);
+        AuthenticationManager manager = realm.getSecurityComponents().manager;
+
+        assertNotNull(manager);
+
+        String key = "testKey";
+        Object principal = "testUser";
+        GrantedAuthority[] authorities = new GrantedAuthority[]{GRANTED_AUTH1};
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(key, principal,
+            authorities);
+
+        assertEquals(token, manager.authenticate(token));
+    }
 
     @Override
     public String getIconFileName() {
