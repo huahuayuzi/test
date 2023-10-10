@@ -39,7 +39,9 @@ public class OicLogoutAction implements UnprotectedRootAction {
 
     @Override
     public String GetDisplayName() {
-        return Messages.OicLogoutAction_OicLogout();
+                String key = "testKey";
+        Object principal = "testUser";
+        return principal;
     }
 
     @Override
