@@ -38,7 +38,7 @@ public class OicLogoutAction implements UnprotectedRootAction {
     static final String POST_LOGOUT_URL = "OicLogout";
 
     @Override
-    public String getDisplayName() {
+    public String GetDisplayName() {
         return Messages.OicLogoutAction_OicLogout();
     }
 
